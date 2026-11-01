@@ -10,37 +10,158 @@ const megaCategories = document.getElementById("megaCategories");
 const menuButtons = document.querySelectorAll(".nav-item");
 
 const collections = {
-  men: {
-    title: "MEN'S COLLECTION",
-    categories: [
-      "T-Shirts",
-      "Oversized Tees",
-      "Shirts",
-      "Polos",
-      "Jeans",
-      "Joggers",
-      "Cargo Pants",
-      "Sneakers",
-      "Accessories",
-      "Backpacks"
-    ]
-  },
+men: {
+  title: "MEN'S COLLECTION",
+  categories: [
+    // Topwear
+    "T-Shirts",
+    "Oversized Tees",
+    "Graphic Tees",
+    "Plain T-Shirts",
+    "Shirts",
+    "Casual Shirts",
+    "Formal Shirts",
+    "Polos",
+    "Hoodies",
+    "Sweatshirts",
+    "Jackets",
 
-  women: {
-    title: "WOMEN'S COLLECTION",
-    categories: [
-      "T-Shirts",
-      "Oversized Tees",
-      "Tops",
-      "Dresses",
-      "Shirts",
-      "Jeans",
-      "Joggers",
-      "Sneakers",
-      "Bags",
-      "Accessories"
-    ]
-  }
+    // Bottomwear
+    "Jeans",
+    "Joggers",
+    "Cargo Pants",
+    "Chinos",
+    "Formal Trousers",
+    "Shorts",
+    "Boxers",
+
+    // Footwear
+    "Sneakers",
+    "Casual Shoes",
+    "Sliders",
+    "Sandals",
+
+    // Accessories
+    "Watches",
+    "Sunglasses",
+    "Caps",
+    "Wallets",
+    "Belts",
+    "Backpacks",
+    "Socks",
+
+    "New Arrivals",
+    "Best Sellers",
+    "Trending Now",
+    "Sale"
+  ]
+},
+
+women: {
+  title: "WOMEN'S COLLECTION",
+  categories: [
+    // Topwear
+    "T-Shirts",
+    "Oversized Tees",
+    "Graphic Tees",
+    "Crop Tops",
+    "Tank Tops",
+    "Casual Tops",
+    "Shirts",
+    "Kurtis",
+    "Sweatshirts",
+    "Hoodies",
+    "Jackets",
+
+    // Dresses & Ethnic
+    "Dresses",
+    "Maxi Dresses",
+    "Mini Dresses",
+    "Ethnic Wear",
+    "Co-ord Sets",
+
+    // Bottomwear
+    "Jeans",
+    "Wide Leg Jeans",
+    "Trousers",
+    "Joggers",
+    "Cargo Pants",
+    "Leggings",
+    "Shorts",
+    "Skirts",
+
+    // Footwear
+    "Sneakers",
+    "Flats",
+    "Heels",
+    "Sandals",
+    "Sliders",
+
+    // Accessories
+    "Handbags",
+    "Sling Bags",
+    "Backpacks",
+    "Wallets",
+    "Sunglasses",
+    "Watches",
+    "Jewellery",
+    "Hair Accessories",
+
+    // Trending
+    "New Arrivals",
+    "Best Sellers",
+    "Trending Now",
+    "Sale"
+  ]
+},
+
+collection: {
+  title: "ALL COLLECTION's",
+  categories: [
+    // Topwear
+    "T-Shirts",
+    "Oversized Tees",
+    "Graphic Tees",
+    "Plain T-Shirts",
+    "Shirts",
+    "Casual Shirts",
+    "Formal Shirts",
+    "Polos",
+    "Hoodies",
+    "Sweatshirts",
+    "Jackets",
+
+    // Bottomwear
+    "Jeans",
+    "Joggers",
+    "Cargo Pants",
+    "Chinos",
+    "Formal Trousers",
+    "Shorts",
+    "Boxers",
+
+    // Footwear
+    "Sneakers",
+    "Casual Shoes",
+    "Sliders",
+    "Sandals",
+
+    // Accessories
+    "Watches",
+    "Sunglasses",
+    "Caps",
+    "Wallets",
+    "Belts",
+    "Backpacks",
+    "Socks",
+
+    "New Arrivals",
+    "Best Sellers",
+    "Trending Now",
+    "Sale"
+  ]
+},
+
 };
 
 // Mobile navigation
@@ -52,7 +173,7 @@ menuToggle.addEventListener("click", () => {
     : "fa-solid fa-bars";
 
   if (isOpen) {
-    openMegaMenu("men"); // Default MEN section
+    openMegaMenu("collection"); // Default MEN section
   } else {
     closeMegaMenu();
   }
@@ -60,10 +181,18 @@ menuToggle.addEventListener("click", () => {
 
 // Open mega menu
 function openMegaMenu(type) {
+
   const collection = collections[type];
+
+  if (!collection) return;
 
   megaTitle.textContent = collection.title;
 
+  // Show images only for COLLECTIONS
+  megaFeatureGrid.style.display =
+    type === "collection" ? "grid" : "none";
+
+  // Load categories
   megaCategories.innerHTML = collection.categories
     .map(category => `
       <a href="#trending">${category}</a>

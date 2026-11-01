@@ -988,11 +988,10 @@ button {
 
 .mega-category-scroll {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
-  overflow-x: auto;
+  overflow: visible;
   padding: 3px 0 13px;
-  scrollbar-width: thin;
-  scrollbar-color: var(--orange) #eee;
 }
 
 .mega-category-scroll a {
