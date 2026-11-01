@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VIBE — Wear Your Personality</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="announcement">
+    <p>🔥 THE BIG STYLE DROP IS HERE — GET YOUR VIBE ON!</p>
+  </div>
+
+  <%- include('partials/navbar') %>
+
+  <!-- HERO VIDEO -->
+  <section class="hero">
+
+    <video class="hero-video" autoplay muted loop playsinline poster="/images/hero-poster.jpg">
+      <source src="/videos/hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <span class="hero-tag">NEW COLLECTION 2026</span>
+
+      <h1>YOUR STYLE.<br>YOUR <span>RULES.</span></h1>
+
+      <p>Don't follow trends. Create your own identity.</p>
+
+      <a href="#categories" class="primary-btn">
+        EXPLORE COLLECTION <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="hero-bottom">
+      <span>01 / 03</span>
+      <span>SCROLL TO EXPLORE ↓</span>
+    </div>
+
+  </section>
+
+  <!-- CATEGORY SECTION -->
+  <section class="section categories-section" id="categories">
+
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">FIND YOUR STYLE</span>
+        <h2>SHOP BY <span>CATEGORY</span></h2>
+      </div>
+      <a href="#trending" class="view-all">VIEW ALL ↗</a>
+    </div>
+
+    <div class="category-grid">
+
+      <a href="#trending" class="category-card" id="men">
+        <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=800&q=85" alt="Men's fashion">
+        <div class="category-info">
+          <span>01</span>
+          <h3>MEN</h3>
+          <p>Explore Collection ↗</p>
+        </div>
+      </a>
+
+      <a href="#trending" class="category-card" id="women">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=85" alt="Women's fashion">
+        <div class="category-info">
+          <span>02</span>
+          <h3>WOMEN</h3>
+          <p>Explore Collection ↗</p>
+        </div>
+      </a>
+
+      <a href="#trending" class="category-card">
+        <img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?w=800&q=85" alt="Footwear">
+        <div class="category-info">
+          <span>03</span>
+          <h3>FOOTWEAR</h3>
+          <p>Explore Collection ↗</p>
+        </div>
+      </a>
+
+      <a href="#trending" class="category-card">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=85" alt="Accessories">
+        <div class="category-info">
+          <span>04</span>
+          <h3>ACCESSORIES</h3>
+          <p>Explore Collection ↗</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- PROMOTIONAL BANNER -->
+  <section class="promo-banner">
+
+    <div class="promo-content">
+      <span>THE NEW ERA OF STREETWEAR</span>
+      <h2>STAND OUT.<br>NEVER BLEND IN.</h2>
+      <a href="#trending" class="light-btn">DISCOVER MORE ↗</a>
+    </div>
+
+    <div class="promo-image">
+      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1000&q=85" alt="Streetwear collection">
+    </div>
+
+  </section>
+
+  <!-- TRENDING PRODUCTS -->
+  <section class="section trending-section" id="trending">
+
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">HANDPICKED FOR YOU</span>
+        <h2>TRENDING <span>NOW</span></h2>
+      </div>
+      <a href="#trending" class="view-all">VIEW ALL ↗</a>
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+        <div class="product-image">
+          <span class="product-tag">BESTSELLER</span>
+          <button class="wishlist" aria-label="Add to wishlist">♡</button>
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=700&q=85" alt="Classic white t-shirt">
+        </div>
+        <div class="product-info">
+          <h3>Classic White Oversized Tee</h3>
+          <p>Men's Casual Wear</p>
+          <strong>₹799 <del>₹1,299</del></strong>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <span class="product-tag">NEW</span>
+          <button class="wishlist" aria-label="Add to wishlist">♡</button>
+          <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=700&q=85" alt="Fashion jacket">
+        </div>
+        <div class="product-info">
+          <h3>Urban Street Jacket</h3>
+          <p>Unisex Streetwear</p>
+          <strong>₹1,499 <del>₹2,499</del></strong>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <span class="product-tag">TRENDING</span>
+          <button class="wishlist" aria-label="Add to wishlist">♡</button>
+          <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=700&q=85" alt="Fashion outfit">
+        </div>
+        <div class="product-info">
+          <h3>Everyday Essential Tee</h3>
+          <p>Women's Collection</p>
+          <strong>₹699 <del>₹999</del></strong>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <span class="product-tag">POPULAR</span>
+          <button class="wishlist" aria-label="Add to wishlist">♡</button>
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&q=85" alt="Sneakers">
+        </div>
+        <div class="product-info">
+          <h3>Classic Street Sneakers</h3>
+          <p>Footwear Collection</p>
+          <strong>₹1,999 <del>₹2,999</del></strong>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- BRAND STRIP -->
+  <section class="brand-strip">
+    <span>BE BOLD.</span>
+    <span>BE DIFFERENT.</span>
+    <span>BE YOU.</span>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <span class="eyebrow">STAY IN THE LOOP</span>
+    <h2>GET THE <span>VIBE.</span></h2>
+    <p>Discover fresh drops, exclusive styles and more.</p>
+
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email address" required>
+      <button type="submit">SUBSCRIBE ↗</button>
+    </form>
+    <p class="newsletter-message" aria-live="polite"></p>
+  </section>
+
+  <%- include('partials/footer') %>
+
+  <script src="/js/script.js"></script>
+
+</body>
+</html>
