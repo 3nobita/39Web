@@ -1,0 +1,473 @@
+:root {
+  --orange: #f15a29;
+  --black: #151515;
+  --gray: #777;
+  --light: #f5f4f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-page {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--black);
+  overflow: hidden;
+}
+
+.about-page img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.about-page a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.about-container {
+  width: min(1200px, 90%);
+  margin: auto;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--orange);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.section-heading {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(36px, 5vw, 65px);
+  line-height: 1.08;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.section-description {
+  color: var(--gray);
+  line-height: 1.9;
+  font-size: 14px;
+  margin-top: 22px;
+  max-width: 520px;
+}
+
+/* HERO */
+
+.about-hero {
+  min-height: 650px;
+  height: 80vh;
+  max-height: 850px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.72), rgba(0,0,0,.08)),
+    url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1800&q=85')
+    center 35% / cover no-repeat;
+}
+
+.hero-content {
+  width: min(1200px, 90%);
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tag {
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.hero-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(65px, 10vw, 135px);
+  line-height: .95;
+  text-transform: uppercase;
+  max-width: 850px;
+}
+
+.hero-title span {
+  color: var(--orange);
+}
+
+.hero-text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #eee;
+  max-width: 400px;
+  margin-top: 30px;
+}
+
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 35px;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* INTRO */
+
+.about-intro {
+  padding: 110px 0;
+  text-align: center;
+}
+
+.intro-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(36px, 6vw, 75px);
+  line-height: 1.15;
+  text-transform: uppercase;
+  max-width: 950px;
+  margin: auto;
+}
+
+.intro-title span {
+  color: var(--orange);
+}
+
+.intro-text {
+  max-width: 620px;
+  margin: 25px auto 0;
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* OUR STORY */
+
+.about-story {
+  padding: 90px 0;
+  background: var(--light);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.story-image {
+  height: 590px;
+  position: relative;
+}
+
+.story-image img {
+  height: 100%;
+}
+
+.story-badge {
+  position: absolute;
+  right: -25px;
+  bottom: 30px;
+  background: var(--orange);
+  color: white;
+  padding: 25px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  transform: rotate(-4deg);
+}
+
+.story-content {
+  padding: 20px 0;
+}
+
+.story-content .section-description {
+  max-width: 470px;
+}
+
+.story-small-heading {
+  font-size: 13px;
+  font-weight: 800;
+  margin-top: 30px;
+}
+
+/* PHILOSOPHY */
+
+.about-philosophy {
+  padding: 120px 0;
+  text-align: center;
+}
+
+.philosophy-text {
+  max-width: 800px;
+  margin: 25px auto;
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 2;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 65px;
+  text-align: left;
+}
+
+.philosophy-card {
+  background: var(--light);
+  padding: 38px 30px;
+  min-height: 230px;
+  transition: .3s;
+}
+
+.philosophy-card:hover {
+  background: var(--black);
+  color: white;
+  transform: translateY(-8px);
+}
+
+.philosophy-number {
+  font-family: 'Oswald', sans-serif;
+  font-size: 35px;
+  color: var(--orange);
+}
+
+.philosophy-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin: 20px 0 12px;
+}
+
+.philosophy-card p {
+  color: var(--gray);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.philosophy-card:hover p {
+  color: #ccc;
+}
+
+/* IMAGE BANNER */
+
+.about-banner {
+  height: 540px;
+  position: relative;
+  background:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=85')
+    center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.banner-content h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(55px, 9vw, 105px);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.banner-content p {
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+
+/* GALLERY */
+
+.about-gallery {
+  padding: 110px 0;
+}
+
+.gallery-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 15px;
+  height: 420px;
+}
+
+.gallery-grid img {
+  height: 100%;
+  transition: .5s;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+/* CTA */
+
+.about-cta {
+  background: var(--orange);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.about-cta h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(45px, 7vw, 85px);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.about-cta p {
+  font-size: 14px;
+  margin: 22px auto;
+  max-width: 500px;
+  line-height: 1.8;
+}
+
+.cta-link {
+  display: inline-block;
+  margin-top: 20px;
+  background: white;
+  color: var(--black) !important;
+  padding: 16px 32px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.cta-link:hover {
+  background: var(--black);
+  color: white !important;
+}
+
+/* REVEAL ANIMATION */
+
+.about-page .reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+.about-page .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+
+  .about-hero {
+    height: 620px;
+    min-height: 550px;
+    background-position: 58% center;
+  }
+
+  .hero-title {
+    font-size: clamp(60px, 14vw, 95px);
+  }
+
+  .about-intro {
+    padding: 75px 0;
+  }
+
+  .about-story {
+    padding: 70px 0;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .story-image {
+    height: 450px;
+    margin-right: 15px;
+  }
+
+  .story-badge {
+    right: -12px;
+    font-size: 18px;
+  }
+
+  .about-philosophy {
+    padding: 80px 0;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 40px;
+  }
+
+  .philosophy-card {
+    min-height: auto;
+    padding: 30px;
+  }
+
+  .about-banner {
+    height: 400px;
+  }
+
+  .about-gallery {
+    padding: 75px 0;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    height: 520px;
+  }
+
+  .gallery-item:first-child {
+    grid-column: span 2;
+  }
+
+  .gallery-item:first-child img {
+    object-position: center 40%;
+  }
+
+  .about-cta {
+    padding: 80px 20px;
+  }
+}
+
+@media(max-width: 420px) {
+  .about-container {
+    width: 88%;
+  }
+
+  .hero-text {
+    font-size: 13px;
+  }
+
+  .story-image {
+    height: 360px;
+  }
+
+  .section-description {
+    font-size: 13px;
+  }
+
+  .gallery-grid {
+    height: 420px;
+    gap: 9px;
+  }
+}
